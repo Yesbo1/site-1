@@ -1,0 +1,208 @@
+body {
+  background: linear-gradient(to right, #c5b9bb, #d1d1d1);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------------------------- */
+
+@viewport {
+  room: 1.0;
+  width: extent-to-zoom; 
+}
+
+@-ms-viewport {
+  width: extent-to-zoom;
+  zoom: 1.0;
+}
+
+/* ----------------------------------------------------------- */
+
+.container .telegram a {
+  color: #0088cc;
+}
+
+.container .instagram a {
+  color: #e4405f;
+}
+
+.container .vkontakte a {
+  color: #597da3;
+}
+
+.container .whatsapp a {
+  color: #25d366;
+}
+
+.container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #515351, #a3a3a3);
+  border: solid 2px #3d3f3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div i {
+  font-size: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----------------------------------------------------------- */
+
+.bar1,
+.bar2 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  transform: translate(0, 0) rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.bar2 {
+  transform: translate(0, 0) rotate(-90deg);
+  position: absolute;
+}
+
+/* ----------------------------------------------------------- */
+
+.telegram,
+.instagram,
+.whatsapp,
+.vkontakte {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0, 15px);
+}
+
+.instagram {
+  transition: all 0.3s ease-in-out;
+  transform: translate(-15px, 0);
+}
+
+.whatsapp {
+  transform: translate(15px, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.vkontakte {
+  transform: translate(0, -15px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----------------------------------------------------------- */
+
+.telegram.exp,
+.instagram.exp,
+.whatsapp.exp,
+.vkontakte.exp {
+  background-color: white;
+  transform: translate(0, 70px);
+  width: 70px;
+  height: 70px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.instagram.exp {
+  transform: translate(-70px, 0);
+}
+
+.vkontakte.exp {
+  transform: translate(0, -70px);
+}
+
+.whatsapp.exp {
+  transform: translate(70px, 0);
+}
+
+/* ----------------------------------------------------------- */
+
+.telegram.exp:hover i,
+.instagram.exp:hover i,
+.whatsapp.exp:hover i,
+.vkontakte.exp:hover i {
+  color: white;
+`  transform: translate(0, 0);
+}
+
+.telegram.exp:hover {
+  width: 70px;
+  height: 70px;
+  background-color: #0088cc;
+  transform: translate(0, 70px);
+  /* border: solid 2px #000000a6; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.instagram.exp:hover {
+  width: 70px;
+  height: 70px;
+  background-color: #e4405f;
+  transform: translate(-70px, 0);
+  /* border: solid 2px #000000a6; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.vkontakte.exp:hover {
+  width: 70px;
+  height: 70px;
+  background-color: #597da3;
+  transform: translate(0, -70px);
+  /* border: solid 2px #000000a6; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.whatsapp.exp:hover {
+  width: 70px;
+  height: 70px;
+  background-color: #25d366;
+  transform: translate(70px, 0);
+  /* border: solid 2px #000000a6; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* ----------------------------------------------------------- */
+
+.bar1.exp,
+.bar2.exp {
+  transform: rotate(45deg);
+  width: 35px;
+  height: 5px;
+}
+
+.bar2.exp {
+  transform: rotate(-45deg);
+}
+
+/* ----------------------------------------------------------- */
+
+.container.exp {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to top, #515351, #a3a3a3);
+  border: solid 2px #3d3f3d;
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.63);
+}
+
+.container div i.exp {
+  opacity: 1;
+  font-size: 40px;
+}
